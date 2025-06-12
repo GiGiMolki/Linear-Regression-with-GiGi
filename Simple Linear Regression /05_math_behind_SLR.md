@@ -10,7 +10,8 @@ In this notebook, we will:
 
 To find the best-fitting straight line for a set of data points:
 
-![Equation](/Linear-Regression-with-GiGi/Simple%20Linear%20Regression%20/images/image3.png)
+![Alt Text](/Simple%20Linear%20Regression%20/images/image3.png)
+
 
 Where:
 - hat{y} = predicted output
@@ -21,17 +22,16 @@ Where:
 
 The model should minimize the total squared error:
 
-![Error Exprn ](/Linear-Regression-with-GiGi/Simple%20Linear%20Regression%20/images/image4.png)
+![Alt Text](/Simple%20Linear%20Regression%20/images/image4.png)
 
 ## 🧠 Deriving Optimal θ₀ and θ₁
 
 Remember, when we derive the Error equation with theta_0 and set its result to zero, it will give us the optimum value of theta_0 that will bring the Error to minimum/maximum.
 
-![intercept](/Linear-Regression-with-GiGi/Simple%20Linear%20Regression%20/images/image5.png)
+![Alt Text](/Simple%20Linear%20Regression%20/images/image5.png)
 
 Since we get the theta_0 value, we will substitute it to find the optimum theta_1:
-
-![slope](/Linear-Regression-with-GiGi/Simple%20Linear%20Regression%20/images/image6.png)
+![Alt Text](/Simple%20Linear%20Regression%20/images/image6.png)
 
 ## 📏 Geometric Meaning
 
@@ -46,8 +46,7 @@ We can write the problem in **matrix form**:
 
 Let:
 
-
-![Matrix forms](/Linear-Regression-with-GiGi/Simple%20Linear%20Regression%20/images/image7.png)
+![Alt Text](/Simple%20Linear%20Regression%20/images/image7.png)
 
 
 This is the **Normal Equation**.

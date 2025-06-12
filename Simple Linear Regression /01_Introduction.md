@@ -61,7 +61,7 @@ SSR = sum (y_i - hat{y}_i)^2
 Let the dataset have \( n \) points: \( (x_1, y_1), ..., (x_n, y_n) \)
 
 We estimate: 
-![Best Fit Line Equation ](/Linear-Regression-with-GiGi/Simple%20Linear%20Regression%20/images/image1.png)
+![Alt Text](/Simple%20Linear%20Regression%20/images/image1.png)
 
 **Formulas:**
 - Slope \( m \):
@@ -74,7 +74,7 @@ m = \frac{n \sum x y - \sum x \sum y}{n \sum x^2 - (\sum x)^2}
 c = \bar{y} - m \bar{x}
 \]
 
-![slope and intercept ](/Linear-Regression-with-GiGi/Simple%20Linear%20Regression%20/images/image2.png)
+![Alt Text](/Simple%20Linear%20Regression%20/images/image2.png)
 
 
 Where:
