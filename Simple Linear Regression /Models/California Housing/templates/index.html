@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>California Housing - SLR Model</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #56CCF2, #2F80ED);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #2F80ED;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: #2F80ED;
+            outline: none;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            width: 100%;
+            padding: 12px;
+            background-color: #2F80ED;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1c60c8;
+        }
+
+        h3 {
+            margin-top: 20px;
+            color: #27ae60;
+        }
+
+        p {
+            margin-top: 10px;
+            color: #555;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Predict Median House Value</h2>
+        <form method="POST" action="/predict">
+            <label for="income">Enter Median Income:</label>
+            <input type="text" name="income" required>
+            <input type="submit" value="Predict">
+        </form>
+
+        {% if prediction is defined %}
+            <h3>Prediction: ${{ prediction | round(2) }}</h3>
+            <p>Based on income: ${{ income }}</p>
+        {% endif %}
+
+        {% if error %}
+            <p class="error">Error: {{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
